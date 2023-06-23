@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Body Shape Detection
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <ion-button expand="full" (click)="takePicture()">
+      Take Picture
+    </ion-button>
+  </div>
+
+  <div class="predictions" *ngIf="_predictions">
+    <h3>Predictions:</h3>
+    <ul>
+      <li *ngFor="let prediction of _predictions">
+        {{ prediction.className }} - {{ prediction.probability }}
+      </li>
+    </ul>
+  </div>
+</ion-content>
