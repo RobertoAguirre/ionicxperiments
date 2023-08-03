@@ -44,6 +44,12 @@ export class BodyshapePage implements OnInit {
       const model = await mobilenet.load();
       const predictions = await model.classify(imageTensor as tf.Tensor3D);
       this._predictions = predictions;
+      console.log(this._predictions);
+      this._predictions.forEach(element => {
+        if(element){
+
+        }
+      });
 
       return predictions;
     } else {
