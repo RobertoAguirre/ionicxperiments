@@ -21,4 +21,41 @@
       </li>
     </ul>
   </div>
+
+  <ion-card *ngIf="detectedBodyshape=='Ectomorph'">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <img src="assets/ectomorph.png"/>
+        </ion-col>
+        <ion-col>
+          <ion-list>
+            <ion-item>
+              <ion-button expand="full" (click)="changeText('description')">Description</ion-button>
+            </ion-item>
+            <ion-item>
+              <ion-button expand="full" (click)="changeText('workout')">Workout</ion-button>
+            </ion-item>
+            <ion-item>
+              <ion-button expand="full" (click)="changeText('nutrition')">Nutrition</ion-button>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+            
+      </ion-row>
+      <ion-row>
+        <p class="info">
+          {{infoText}}
+        </p>
+      </ion-row>
+    </ion-grid>
+    
+  </ion-card>
+  <ion-card *ngIf="detectedBodyshape=='Endomorph'">
+    <img src="assets/endomorph.png"/>
+  </ion-card>
+  <ion-card *ngIf="detectedBodyshape=='Mesomorph'">
+    <img src="assets/mesoporph.png"/>
+  </ion-card>
+
 </ion-content>

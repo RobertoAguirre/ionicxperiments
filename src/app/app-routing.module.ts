@@ -18,7 +18,11 @@ const routes: Routes = [
   {
     path: 'bodyshape',
     loadChildren: () => import('./bodyshape/bodyshape.module').then( m => m.BodyshapePageModule)
+  },  {
+    path: 'workout',
+    loadChildren: () => import('./workout/workout.module').then( m => m.WorkoutPageModule)
   },
+
 ];
 
 @NgModule({
